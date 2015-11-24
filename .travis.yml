@@ -8,10 +8,10 @@ podfile: Channels\ iOS\ Example/Podfile
 before_install:
 - gem install cocoapods # Since Travis is not always on latest version
 - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
-- pod install --project-directory=Channels\ iOS\ Example
 script:
 - set -o pipefail
 - xcodebuild -version
 - xcodebuild -showsdks
 
+- xcodebuild test -project Channels.xcodeproj -scheme "Channels" -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty
 - pod lib lint

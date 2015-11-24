@@ -1,0 +1,20 @@
+{
+  "name": "Channels",
+  "version": "0.1.0",
+  "summary": "An experiment in using Channels.",
+  "description": "An experiment in using Channels.",
+  "homepage": "https://github.com/chaselatta/Channels",
+  "license": "MIT",
+  "authors": {
+    "Chase Latta": "chaselatta@twitter.com"
+  },
+  "source": {
+    "git": "https://github.com/chaselatta/channels.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "requires_arc": true,
+  "source_files": "Channels/**/*"
+}
