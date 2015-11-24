@@ -19,7 +19,7 @@ An attempt to bring channels to swift.
   s.source           = { :git => "https://github.com/chaselatta/channels.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/???'
 
-  s.platform     = :ios, '8.0'
+  s.platform     = :ios, '9.0'
   s.requires_arc = true
 
   s.source_files = 'Channels/**/*'
