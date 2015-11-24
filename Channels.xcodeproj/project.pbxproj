@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB4EAD571C04594D00907DF3 /* ChannelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6446551C039E3A0038DBA3 /* ChannelTests.swift */; };
 		DB64464A1C039E3A0038DBA3 /* Channels.h in Headers */ = {isa = PBXBuildFile; fileRef = DB6446491C039E3A0038DBA3 /* Channels.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DB6446511C039E3A0038DBA3 /* Channels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB6446461C039E3A0038DBA3 /* Channels.framework */; };
-		DB6446561C039E3A0038DBA3 /* ChannelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6446551C039E3A0038DBA3 /* ChannelTests.swift */; };
 		DB6446611C039E4E0038DBA3 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6446601C039E4E0038DBA3 /* Channel.swift */; };
+		DBF23BC91C0459030038288A /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6446601C039E4E0038DBA3 /* Channel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -205,7 +206,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB6446561C039E3A0038DBA3 /* ChannelTests.swift in Sources */,
+				DBF23BC91C0459030038288A /* Channel.swift in Sources */,
+				DB4EAD571C04594D00907DF3 /* ChannelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

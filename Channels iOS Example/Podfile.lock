@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: ../Channels.podspec
 
 SPEC CHECKSUMS:
-  Channels: 1efc1cf7e269f8f461d6d434dc2155079cfa2675
+  Channels: a9001f69acc9f60c88002c4aa3c973077f213329
 
 COCOAPODS: 0.39.0

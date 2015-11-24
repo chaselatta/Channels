@@ -2,7 +2,7 @@
   "name": "Channels",
   "version": "0.1.0",
   "summary": "An experiment in using Channels.",
-  "description": "An experiment in using Channels.",
+  "description": "An attempt to bring channels to swift.",
   "homepage": "https://github.com/chaselatta/Channels",
   "license": "MIT",
   "authors": {
@@ -13,7 +13,7 @@
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
   "requires_arc": true,
   "source_files": "Channels/**/*"
