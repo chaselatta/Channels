@@ -28,7 +28,7 @@ class ChannelTests: XCTestCase {
     func testListenInvokesBlockImmediate() {
 
         var didInvoke = false
-        intChannel.listen { _ in didInvoke = true }
+        intChannel.registerListener(self) { _, _ in didInvoke = true }
         
         sink.send(1)
         XCTAssert(didInvoke == true, "Should have received a message")
@@ -40,8 +40,8 @@ class ChannelTests: XCTestCase {
         var didReceiveInt = false
         var didReceiveStr = false
         
-        intChannel.listen { didReceiveInt = ($0 == sentInt) }
-        stringChannel.listen { didReceiveStr = ($0 == sentStr) }
+        intChannel.registerListener(self) { _, d in didReceiveInt = (d == sentInt) }
+        stringChannel.registerListener(self) { _, d in didReceiveStr = (d == sentStr) }
         
         sink.send(sentInt)
         sink.send(sentStr)
@@ -56,7 +56,7 @@ class ChannelTests: XCTestCase {
         let queue = dispatch_queue_create("my-queue", DISPATCH_QUEUE_SERIAL)
         dispatch_queue_set_specific(queue, &key, &value, nil)
         
-        intChannel.listen { _ in
+        intChannel.registerListener(self) { _, _ in
             let queueValue = dispatch_get_specific(&key)
             XCTAssertTrue(queueValue == &value)
         }
@@ -65,17 +65,33 @@ class ChannelTests: XCTestCase {
             self.sink.send(1)
         }
     }
-
-    func testRemoveListener() {
+    
+    func testListenerRemovedWhenSetToNil() {
         var receiveCount = 0
-        let listener = intChannel.listen { _ in
+        var listener: AnyObject? = _EmptyClass()
+        intChannel.registerListener(listener!) { _, _ in
             receiveCount++
         }
         
         sink.send(1)
-        intChannel.removeListener(listener)
+        listener = nil
+        sink.send(1)
+        
+        XCTAssertEqual(receiveCount, 1)
+    }
+
+    func testRemoveListener() {
+        var receiveCount = 0
+        intChannel.registerListener(self) { _, _ in
+            receiveCount++
+        }
+        
+        sink.send(1)
+        intChannel.unregisterListener(self)
         sink.send(1)
         
         XCTAssertEqual(receiveCount, 1)
     }
 }
+
+private class _EmptyClass {}

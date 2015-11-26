@@ -6,43 +6,7 @@
 //  Copyright © 2015 Chase Latta. All rights reserved.
 //
 
-import Foundation
-
-public class ChannelSink {
-    
-    private typealias HandlerType = Any -> ()
-    
-    private var handlers = [String: HandlerType]()
-    private let syncQueue = dispatch_queue_create("com.channel-sink.sync-queue", DISPATCH_QUEUE_SERIAL)
-    
-    public func send(data: Any) {
-        var handlersCopy: [String: HandlerType]! = nil
-        
-        dispatch_sync(syncQueue) {
-            handlersCopy = self.handlers
-        }
-        
-        for (_, handler) in handlersCopy {
-            handler(data)
-        }
-    }
-    
-    private func registerHandler(handler: HandlerType) -> String {
-        let id = NSUUID().UUIDString
-        dispatch_sync(syncQueue) {
-            self.handlers[id] = handler
-        }
-        return id
-    }
-    
-    private func unregisterHandler(id: String) {
-        dispatch_sync(syncQueue) {
-            self.handlers.removeValueForKey(id)
-        }
-    }
-}
-
-public class Channel<Data> {
+public struct Channel<Data> {
     
     private let sink: ChannelSink
 
@@ -50,15 +14,17 @@ public class Channel<Data> {
         self.sink = sink
     }
     
-    func listen(handler: Data -> ()) -> String {
-        return sink.registerHandler { data in
-            if let typedData = data as? Data {
-                handler(typedData)
+    public func registerListener<T: AnyObject>(listener: T, handler: (T, Data) -> ()) {
+        
+        sink.registerListener(listener) { target, data in
+            if let typedData = data as? Data, let typedTarget = target as? T {
+                handler(typedTarget, typedData)
             }
         }
     }
     
-    func removeListener(id: String) {
-        sink.unregisterHandler(id)
+    public func unregisterListener(listener: AnyObject?) {
+        guard let listener = listener else { return }
+        sink.unregisterListener(listener)
     }
 }
