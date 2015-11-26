@@ -1,6 +1,0 @@
-framework module Channels {
-  umbrella header "Channels-umbrella.h"
-
-  export *
-  module * { export * }
-}

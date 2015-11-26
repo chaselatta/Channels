@@ -9,17 +9,24 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let id = NSUUID().UUIDString
+    
+    deinit {
+        print("GO AWAY")
+    }
 
+    @IBAction func handleButton() {
+        let vc = ViewController()
+        showViewController(vc, sender: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        GlobalGenerator.channel.registerListener(self) { vc, data in
+            print("\(vc.id) - \(data)")
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 

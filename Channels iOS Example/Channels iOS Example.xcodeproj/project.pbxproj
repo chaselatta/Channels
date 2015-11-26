@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3403DF4C33BE9C6088DCCBFD /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06754A1543AC318908E8A682 /* Pods.framework */; };
+		DB0D6B301C06C2F700DB8137 /* NumberGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0D6B2F1C06C2F700DB8137 /* NumberGenerator.swift */; };
 		DBBD447C1C042D5000826FAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD447B1C042D5000826FAD /* AppDelegate.swift */; };
 		DBBD447E1C042D5000826FAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD447D1C042D5000826FAD /* ViewController.swift */; };
 		DBBD44811C042D5000826FAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBBD447F1C042D5000826FAD /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 		06754A1543AC318908E8A682 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A42FBE08285BD267A731D5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D18C27C2ECD00B7B23D912EF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		DB0D6B2F1C06C2F700DB8137 /* NumberGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberGenerator.swift; sourceTree = "<group>"; };
 		DBBD44781C042D5000826FAD /* Channels iOS Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Channels iOS Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBBD447B1C042D5000826FAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBBD447D1C042D5000826FAD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			children = (
 				DBBD447B1C042D5000826FAD /* AppDelegate.swift */,
 				DBBD447D1C042D5000826FAD /* ViewController.swift */,
+				DB0D6B2F1C06C2F700DB8137 /* NumberGenerator.swift */,
 				DBBD447F1C042D5000826FAD /* Main.storyboard */,
 				DBBD44821C042D5000826FAD /* Assets.xcassets */,
 				DBBD44841C042D5000826FAD /* LaunchScreen.storyboard */,
@@ -211,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBBD447E1C042D5000826FAD /* ViewController.swift in Sources */,
+				DB0D6B301C06C2F700DB8137 /* NumberGenerator.swift in Sources */,
 				DBBD447C1C042D5000826FAD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,6 +328,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Channels iOS Example/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chaselatta.Channels-iOS-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -336,6 +341,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Channels iOS Example/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chaselatta.Channels-iOS-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";

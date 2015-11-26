@@ -35,6 +35,8 @@ private func ==(lhs: ListenerWrapper, rhs: ListenerWrapper) -> Bool {
 
 public class ChannelSink {
     
+    public init() {}
+    
     private let _serialQueue = dispatch_queue_create("com.channels.channel-sink.serial-queue", DISPATCH_QUEUE_SERIAL)
     private var _wrappers = [ListenerWrapper]()
     
