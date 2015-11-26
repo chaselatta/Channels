@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		DB0D6B2E1C066A7A00DB8137 /* ChannelSink.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0D6B2D1C066A7A00DB8137 /* ChannelSink.swift */; };
+		DB0D6B361C06DB1300DB8137 /* ChannelWrapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0D6B351C06DB1300DB8137 /* ChannelWrapperTests.swift */; };
+		DB0D6B381C06DB2800DB8137 /* ChannelWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0D6B371C06DB2800DB8137 /* ChannelWrapper.swift */; };
 		DB64464A1C039E3A0038DBA3 /* Channels.h in Headers */ = {isa = PBXBuildFile; fileRef = DB6446491C039E3A0038DBA3 /* Channels.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DB6446511C039E3A0038DBA3 /* Channels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB6446461C039E3A0038DBA3 /* Channels.framework */; };
 		DB6446561C039E3A0038DBA3 /* ChannelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6446551C039E3A0038DBA3 /* ChannelTests.swift */; };
@@ -26,6 +28,8 @@
 
 /* Begin PBXFileReference section */
 		DB0D6B2D1C066A7A00DB8137 /* ChannelSink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelSink.swift; sourceTree = "<group>"; };
+		DB0D6B351C06DB1300DB8137 /* ChannelWrapperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelWrapperTests.swift; sourceTree = "<group>"; };
+		DB0D6B371C06DB2800DB8137 /* ChannelWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelWrapper.swift; sourceTree = "<group>"; };
 		DB6446461C039E3A0038DBA3 /* Channels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Channels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB6446491C039E3A0038DBA3 /* Channels.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Channels.h; sourceTree = "<group>"; };
 		DB64464B1C039E3A0038DBA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -77,8 +81,9 @@
 			children = (
 				DB6446491C039E3A0038DBA3 /* Channels.h */,
 				DB6446601C039E4E0038DBA3 /* Channel.swift */,
-				DB64464B1C039E3A0038DBA3 /* Info.plist */,
+				DB0D6B371C06DB2800DB8137 /* ChannelWrapper.swift */,
 				DB0D6B2D1C066A7A00DB8137 /* ChannelSink.swift */,
+				DB64464B1C039E3A0038DBA3 /* Info.plist */,
 			);
 			path = Channels;
 			sourceTree = "<group>";
@@ -86,6 +91,7 @@
 		DB6446541C039E3A0038DBA3 /* ChannelsTests */ = {
 			isa = PBXGroup;
 			children = (
+				DB0D6B351C06DB1300DB8137 /* ChannelWrapperTests.swift */,
 				DB6446551C039E3A0038DBA3 /* ChannelTests.swift */,
 				DB6446571C039E3A0038DBA3 /* Info.plist */,
 			);
@@ -200,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB0D6B381C06DB2800DB8137 /* ChannelWrapper.swift in Sources */,
 				DB0D6B2E1C066A7A00DB8137 /* ChannelSink.swift in Sources */,
 				DB6446611C039E4E0038DBA3 /* Channel.swift in Sources */,
 			);
@@ -210,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB6446561C039E3A0038DBA3 /* ChannelTests.swift in Sources */,
+				DB0D6B361C06DB1300DB8137 /* ChannelWrapperTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

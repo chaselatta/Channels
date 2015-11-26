@@ -27,4 +27,5 @@ public struct Channel<Data> {
         guard let listener = listener else { return }
         sink.unregisterListener(listener)
     }
+    
 }
